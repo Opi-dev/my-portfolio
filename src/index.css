@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #9333ea, 0 0 40px #ec4899;
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 20px #60a5fa, 0 0 40px #a855f7, 0 0 60px #f472b6;
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #9333ea, 0 0 40px #ec4899;
+  }
+}
+
+.border-line-animation {
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899, #3b82f6);
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+  filter: brightness(1.5);
+  border-radius: 1rem;
+  padding: 4px;
+  z-index: 0;
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2s infinite;
+}
+
